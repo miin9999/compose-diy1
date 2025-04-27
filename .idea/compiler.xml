@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="compose-diy1.core-data" target="21" />
+      <module name="compose-diy1.core-ui" target="21" />
+      <module name="compose-diy1.designsystem" target="21" />
+      <module name="compose-diy1.domain" target="21" />
+      <module name="compose-diy1.home" target="21" />
+      <module name="compose-diy1.network" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
