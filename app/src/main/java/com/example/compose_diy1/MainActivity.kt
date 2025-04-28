@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.compose_diy1.ui.composeApp
+import com.example.compose_diy1.ui.rememberComposeAppState
 import com.example.compose_diy1.ui.theme.Composediy1Theme
 
 class MainActivity : ComponentActivity() {
@@ -18,30 +20,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+
+            val appState = rememberComposeAppState()
+
             Composediy1Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                composeApp(appState)
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
+    val appState = rememberComposeAppState()
+
     Composediy1Theme {
-        Greeting("Android")
+        composeApp(appState)
     }
 }
